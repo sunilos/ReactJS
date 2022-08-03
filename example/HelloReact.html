@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+</head>
+
+<body>
+
+    <!--
+        Root container tag
+    -->
+    <div id="mydiv"></div>
+
+    <script type="text/babel">
+
+        function Hello() { 
+          var name= "Sunil"; 
+          return <h1>Hello {name}</h1>; 
+        } 
+
+        //Display Hello component to root tag 'mydiv'
+        const root = ReactDOM.createRoot(document.getElementById('mydiv')); 
+        root.render(<Hello/>);
+
+    </script>
+</body>
+</html>

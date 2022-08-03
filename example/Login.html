@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+</head>
+
+<body>
+
+	<!--
+		Display Login form using React JS function
+	-->
+
+    <div id="mydiv"></div>
+
+    <script type="text/babel">
+
+		function Login() { 
+			return (
+			<div>
+				<h1>Login</h1>
+				<form method="get">
+					<table>
+						<tr>
+							<td>Login: </td>
+							<td><input type="text" name="userId" /></td>
+						</tr>
+						<tr>
+							<td>Password: </td>
+							<td><input type="text" name="pass" /></td>
+						</tr>
+						<tr>
+							<td colspan="2">
+								<input type="button" value="Sign In" />
+							</td>
+						</tr>
+					</table>
+				</form>
+			</div>
+        	) 
+		} 
+		
+		//Render Login component
+		const root = ReactDOM.createRoot(document.getElementById('mydiv')); 
+		root.render(<Login/>);
+
+    </script>
+</body>
+</html>

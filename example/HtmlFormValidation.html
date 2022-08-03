@@ -1,0 +1,44 @@
+<html>
+
+<head>
+    <script language="javascript">
+        function validate(form) {
+            var flag = true;
+            var message = "Login successful";
+
+            if(form.userId.value == ""){
+                message = "Login can not be null\n";
+                flag =false;
+            }
+            if(form.pass.value == ""){
+                message += "Password can not be null\n";
+                flag =false;
+            }
+            alert(message);
+            return flag;
+        }
+    </script>
+</head>
+
+<body>
+    <h1>Login</h1>
+    <form method="get" onsubmit="validate(this)">
+        <table>
+            <tr>
+                <td>Login: </td>
+                <td><input type="text" name="userId"   /></td>
+            </tr>
+            <tr>
+                <td>Password: </td>
+                <td><input type="text" name="pass" /></td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <input type="submit" value="Sign In" />
+                </td>
+            </tr>
+        </table>
+    </form>
+</body>
+
+</html>

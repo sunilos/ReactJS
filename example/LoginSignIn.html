@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  </head>
+  <body>
+
+	<!--
+		Display Login form and Handel the signin event 
+
+	-->
+    <div id="mydiv"></div>
+
+    <script type="text/babel">
+	  
+	  //import React, { useState } from 'react';
+
+	  const { useState } = React;
+
+	  function Login() {
+
+		// define msg attributes in the component state
+	  	const [msg, setMsg] = React.useState('No message') ;
+
+		var form = {
+			userId: "",
+			pass: ""
+		};
+
+		/**
+		 * Constant method to handle signin event 
+		 */ 
+		const signIn = function(){
+			if(form.userId == "admin" && form.pass == "admin"){
+				setMsg("Login is correct");
+			}else{
+				setMsg("Please enter correct login id and password");
+			}
+		}
+
+		/**
+		 * Change form attibutes on change event
+		 */ 
+		const changeFormElement = function(e){
+			form[e.name] = e.value;
+		}
+
+        return (
+			<div>
+				<h1>Login</h1> 
+				<h2> {msg} </h2>
+				<form method="get" >
+					<table>
+						<tbody>
+						<tr>
+							<td>Login: </td>
+							<td><input type="text" name="userId" onChange={(e) => changeFormElement(e.target)} /></td>
+						</tr>
+						<tr>
+							<td>Password: </td>
+							<td><input type="text" name="pass" onChange={(e) => changeFormElement(e.target)}/></td>
+						</tr>
+						<tr>
+							<td colSpan="2">
+								<input type="button" value="Sign In" onClick={signIn} /> 
+							</td>
+						</tr>
+						</tbody>
+					</table>
+				</form>
+			</div>
+		);
+      }
+
+	  // Render Login Form 
+	  const root = ReactDOM.createRoot(document.getElementById('mydiv'));
+
+	  root.render(<Login />);
+
+	</script>
+
+  </body>
+</html>
