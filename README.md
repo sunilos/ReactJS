@@ -37,3 +37,4 @@ ORS - React JS  sample project
 # Example
 
 1. \example folder contains react basic example
+1. Open each HTML file in a browser to test it
