@@ -1,7 +1,6 @@
 # ORS React JS project
 ORS - React JS  sample project
 
-
 # Download and run ORSReact project
 
 ## Install dependencies 
@@ -34,3 +33,7 @@ ORS - React JS  sample project
 
 ## Run application at browser 
 1. Type url `http://localhost:3000` to test tthe application 
+
+# Example
+
+1. \example folder contains react basic example
