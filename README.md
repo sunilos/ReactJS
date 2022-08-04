@@ -1,5 +1,7 @@
-# ORS React JS project
-ORS - React JS  sample project
+# React JS Tutorial 
+
+1. \example folder contains basic examples 
+1. \ors forlder contains sample Online Result System project
 
 # Download and run ORSReact project
 
@@ -13,28 +15,7 @@ ORS - React JS  sample project
 ## Run application at browser 
 1. Type url `http://localhost:3000` to test the application 
 
+# Installation and configuration 
 
-# Create a new project
+See https://github.com/sunilos/ReactJS/wiki
 
-# Configuration
-1. If you have npx and Node.js installed, you can create a React application by using create-react-app. To install `create-react-app` module run following command 
-
-    `npm install -g create-react-app`
-
-2. Run following command to create a React application named `testors`
-
-   `npx create-react-app testors`
-
-## Run 'testors' project
-
-1. go to `\testors` folder `cd testors`
-2. start the srever using `npm start` command
-
-
-## Run application at browser 
-1. Type url `http://localhost:3000` to test tthe application 
-
-# Example
-
-1. \example folder contains react basic example
-1. Open each HTML file in a browser to test it
