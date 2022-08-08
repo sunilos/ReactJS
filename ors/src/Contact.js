@@ -4,7 +4,6 @@ class Contact extends React.Component {
 
   render() {
 
-    var p  = this.props.match;
 
     const { params } = this.props.match;
 
