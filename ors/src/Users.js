@@ -1,15 +1,21 @@
 import React from 'react';
 
+/**
+ * User contains an array of user objects. 
+ * With the help of map() method of array object view (render method) does display 
+ * the elements of array.   
+ */
 class Users extends React.Component {
 
-    constructor() {
-        super();
+    constructor(props) {
+        super(props);
         this.userList = [
             { "id": 1, "name": "One" },
             { "id": 2, "name": "Two" },
         ]
     }
 
+    //View method 
     render() {
         return ( 
             <div  >
@@ -29,7 +35,8 @@ class Users extends React.Component {
                     <td>{ele.id}</td>
                     <td>{ele.name}</td>
                 </tr>
-                ) )
+                ) //arrow function close 
+                )//map close
             } 
             </table>
             <br/>
