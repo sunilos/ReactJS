@@ -12,6 +12,7 @@ class Login extends React.Component  {
 
         //component state 
         this.state = {
+             error: "false",
              message: "",
              userid :"",
              password: ""
@@ -24,11 +25,8 @@ class Login extends React.Component  {
      * @param {*} event: object of current event 
      */
     changeState(event){
-        console.log(event);
-
         let name = event.target.name;
         let value = event.target.value;
-
         //change the state of component 
         //setState is used to change the state of the component  
         this.setState({ [name] : value});
@@ -41,11 +39,14 @@ class Login extends React.Component  {
 
         console.log(this.state);
 
+        //clear error 
+        this.setState({ message : ""});
+        this.setState({ error : "false"});
+
         /**
          * If login and password is admin then display App.js page
          */
         if(this.state.userid === "admin" && this.state.password === "admin"){
-
             //Render a page using ReactDOM.render method
             ReactDOM.render( 
                 <React.StrictMode>
@@ -55,6 +56,7 @@ class Login extends React.Component  {
             );            
         }else{
             this.setState({ message : "login is invalid"});
+            this.setState({ error : "true"});
         }
     }
     
@@ -77,7 +79,10 @@ class Login extends React.Component  {
         return ( 
             <div>
                 <h1>Login</h1>
-                <h3  style={{color: "red"}}> {this.state.message}</h3>
+                { 
+                    this.state.error === "true" &&
+                        <h3  style={{color: "red"}}>{this.state.message}</h3>
+                }
                 <form >
                  <table>
                     <tr>

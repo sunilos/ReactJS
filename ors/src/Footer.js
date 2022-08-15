@@ -1,10 +1,14 @@
 import React from 'react';
 
 class Footer extends React.Component {
+    constructor(props){
+        super(props);
+    }
     render() {
         return ( 
             <div>
-                <h6>Copyright(C) Sunil OS </h6> 
+                <hr />
+                <h4>Copyright(C) {this.props.name} </h4> 
             </div >
         );
     }

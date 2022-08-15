@@ -12,7 +12,7 @@ class Users extends React.Component {
         this.userList = [
             { "id": 1, "name": "One" },
             { "id": 2, "name": "Two" },
-        ]
+        ];
     }
 
     //View method 
@@ -22,12 +22,14 @@ class Users extends React.Component {
             <h1> User</h1>
 
             <table width={'50%'} border="1"> 
+                <thead></thead>
                 <tr>
                     <th>Index</th>                    
                     <th>ID</th>
                     <th>Name</th>
                 </tr>
 
+                <tbody>
             {
                 this.userList.map((ele,index) => (
                 <tr>
@@ -37,7 +39,9 @@ class Users extends React.Component {
                 </tr>
                 ) //arrow function close 
                 )//map close
+                
             } 
+                </tbody>
             </table>
             <br/>
             <hr/>

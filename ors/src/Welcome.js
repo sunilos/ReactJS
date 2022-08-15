@@ -3,12 +3,7 @@ import React from 'react';
 class Welcome extends React.Component {
 
   render() {
-
-	  return (
-      <div>
-        <h1>Welcome Rays</h1> 
-      </div>
-    );
+	  return <h1>Welcome Rays</h1> ; 
   }
 }
 export default Welcome

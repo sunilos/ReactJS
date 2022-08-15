@@ -1,5 +1,7 @@
 import React from 'react';
 import axios from 'axios';
+import {Link} from 'react-router-dom'
+
 
 class MarksheetList extends React.Component {
 
@@ -56,6 +58,7 @@ class MarksheetList extends React.Component {
                 </form>
                 
                 <table  border="1"> 
+                    <tbody>
                     <tr>
                         <th>Sr No</th>                            
                         <th>Roll No</th>
@@ -79,9 +82,11 @@ class MarksheetList extends React.Component {
                             <td>{ele.chemistry +ele.physics + ele.maths}</td>   
                             <td>{Math.round((ele.chemistry +ele.physics + ele.maths)/3, 2)}</td>      
                             <td>{ ((ele.chemistry +ele.physics + ele.maths)/3)>=33 ?'Pass':'Fail' }</td>                                                                                                                                      
+                            <td><Link to = {'marksheet/' + ele.id}  > Edit </Link></td>    
                         </tr>
                         ) )
                     } 
+                </tbody>    
                 </table>                
             </div>
         );

@@ -8,7 +8,6 @@ class Marksheet extends React.Component  {
     constructor(props) {
         super(props);
         //component state 
-        let p = this.props.match.params;
         this.state = {
             id: 0, 
             rollNo: "",            
@@ -17,7 +16,10 @@ class Marksheet extends React.Component  {
             chemistry: 0,
             maths: 0,
         };
-        console.log("Marksheet", p);
+        console.log("Marksheet", this.props.match.params.id);
+        console.log("no match", this.props);
+        console.log("location", this.props.location.pathname);   
+        console.log("path", this.props.match.path);              
         this.getMarksheet(432);
     }
 
@@ -36,6 +38,7 @@ class Marksheet extends React.Component  {
         this.setState({ [name] : value});
     }
    
+    //Get marksheet from Restful web service
     getMarksheet(id){
         console.log("state:", this.state )
         let url = 'http://api.sunilos.com:9080/ORSP10/Marksheet/get/'+id;

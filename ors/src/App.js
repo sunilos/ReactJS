@@ -9,6 +9,8 @@ import Login from './Login';
 import MarksheetList from './MarksheetList';
 import Marksheet from './Marksheet';
 import Welcome from './Welcome';
+import Footer from './Footer';
+
 
 function App() {
 
@@ -40,6 +42,7 @@ function App() {
                 <Route path = "/marksheet/:id" component = { Marksheet }/> 
                 <Route component = { NotFound }/> 
             </Switch > 
+            <Footer name="Rays"/>
         </div> 
     </Router >
     );
