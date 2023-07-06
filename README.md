@@ -6,7 +6,7 @@
 # Download and run ORSReact project
 
 ## Install dependencies 
-1. go to \orsreact folder 
+1. go to \ors folder 
 2. run command `npm install`
 
 ## Start the project 
